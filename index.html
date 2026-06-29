@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proliferation I: Vyākaraṇa and Nyāya · Series B · Part Seven · Cultural Musings</title>
+<style>
+:root{
+  --bg:#0c0a08;
+  --bg-paper:#13100d;
+  --bg-card:#181410;
+  --ink:#ece3d4;
+  --ink-dim:#b8ad9a;
+  --ink-faint:#7d7263;
+  --accent:#c9933f;
+  --accent-soft:#8a6a3a;
+  --accent-deep:#5e3f1f;
+  --rule:#2c241c;
+  --sanskrit:#e0b873;
+  --serif:'Tinos','Georgia','Times New Roman',serif;
+  --display:'Spectral','Georgia',serif;
+  --max:780px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);
+  font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-deep);}
+a:hover{color:var(--sanskrit);border-bottom-color:var(--accent);}
+
+header.masthead{
+  text-align:center;padding:64px 24px 40px;border-bottom:1px solid var(--rule);
+  background:radial-gradient(ellipse at top, #1b150e 0%, var(--bg) 70%);
+}
+.brand{letter-spacing:.22em;font-size:13px;color:var(--ink-faint);text-transform:uppercase;}
+.platform-sub{font-size:13px;color:var(--ink-faint);margin-top:4px;}
+.series-tag{margin-top:28px;font-size:14px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;}
+.devanagari-strip{font-size:15px;color:var(--sanskrit);margin-top:10px;letter-spacing:.04em;}
+
+nav.toc{max-width:var(--max);margin:36px auto 0;padding:0 24px;text-align:center;font-size:14px;line-height:2.1;}
+nav.toc a{margin:0 10px;color:var(--ink-dim);border-bottom:1px dotted var(--accent-deep);}
+nav.toc a:hover{color:var(--sanskrit);}
+
+nav.allparts{
+  max-width:var(--max);margin:18px auto 0;padding:18px 24px 0;border-top:1px solid var(--rule);
+  text-align:center;font-size:13.5px;color:var(--ink-faint);line-height:1.9;
+}
+nav.allparts .current{color:var(--accent);font-weight:600;}
+nav.allparts a{color:var(--ink-dim);border-bottom:1px dotted var(--rule);}
+
+main{max-width:var(--max);margin:0 auto;padding:0 24px 80px;}
+
+.title-block{padding:56px 0 24px;text-align:center;}
+.title-block .kicker{font-size:14px;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;}
+.title-block h1{font-family:var(--display);font-size:42px;line-height:1.18;font-weight:600;margin:0 0 18px;color:#f4ead8;}
+.title-block h2.subtitle{font-family:var(--serif);font-style:italic;font-weight:400;font-size:21px;color:var(--ink-dim);margin:0 0 30px;line-height:1.5;}
+.meta-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;font-size:14px;color:var(--ink-faint);margin-top:18px;}
+.meta-grid b{color:var(--ink-dim);font-weight:600;}
+
+.ornament{text-align:center;color:var(--accent-soft);font-size:20px;margin:40px 0;letter-spacing:.4em;}
+
+section.context-box, section.preview-box{
+  background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:32px 32px;margin:32px 0;
+}
+section.context-box h3, section.preview-box h3{font-family:var(--display);color:var(--sanskrit);font-size:20px;margin-top:0;}
+section.context-box h4, section.preview-box h4{font-size:16px;color:var(--ink-dim);margin:24px 0 8px;text-transform:uppercase;letter-spacing:.06em;}
+
+table.partmap{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;}
+table.partmap th, table.partmap td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top;}
+table.partmap th{background:#1d170f;color:var(--accent);font-weight:600;}
+table.partmap tr:nth-child(even) td{background:#15110c;}
+table.partmap td.this-paper{color:var(--sanskrit);font-weight:600;}
+
+blockquote.pull{
+  margin:40px 0;padding:24px 28px;border-left:3px solid var(--accent);
+  background:linear-gradient(90deg, #1a140c, transparent);font-style:italic;font-size:18.5px;color:#ddd0b8;
+}
+blockquote.pull .attrib{display:block;text-align:right;font-style:normal;font-size:13px;color:var(--accent);margin-top:12px;letter-spacing:.05em;text-transform:uppercase;}
+
+h1.sectionhead{
+  font-family:var(--display);font-size:14px;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;
+  margin:64px 0 4px;border-top:1px solid var(--rule);padding-top:36px;
+}
+h1.sectionhead + h2.sectiontitle{margin-top:6px;}
+h2.sectiontitle{font-family:var(--display);font-size:30px;line-height:1.25;color:#f4ead8;margin:0 0 28px;font-weight:600;}
+h3{font-family:var(--display);font-size:21px;color:var(--sanskrit);margin:38px 0 14px;}
+p{margin:0 0 18px;color:var(--ink);}
+.dim{color:var(--ink-dim);}
+
+.sanskrit-block{
+  text-align:center;font-size:21px;color:var(--sanskrit);line-height:1.9;margin:30px 0;padding:18px 0;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.sanskrit-block .translit{display:block;font-size:15px;font-style:italic;color:var(--ink-dim);margin-top:10px;}
+.sanskrit-block .gloss{display:block;font-size:14.5px;color:var(--ink-faint);margin-top:8px;font-style:normal;}
+.cite-source{text-align:center;font-size:13px;color:var(--ink-faint);margin-top:-22px;margin-bottom:30px;letter-spacing:.04em;}
+
+.formula-box{
+  background:#161108;border:1px solid var(--accent-deep);border-radius:4px;padding:26px 30px;margin:30px 0;
+  text-align:center;
+}
+.formula-box .formula-main{font-family:var(--display);font-size:20px;color:var(--sanskrit);letter-spacing:.02em;margin-bottom:10px;}
+.formula-box .formula-translit{font-size:14.5px;font-style:italic;color:var(--ink-dim);}
+.formula-box .formula-note{font-size:13.5px;color:var(--ink-faint);margin-top:14px;border-top:1px solid var(--rule);padding-top:14px;}
+
+table.datatable{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px;}
+table.datatable th,table.datatable td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top;}
+table.datatable th{background:#1d170f;color:var(--accent);}
+table.datatable tr:nth-child(even) td{background:#15110c;}
+table.datatable caption{text-align:left;font-size:14px;color:var(--ink-faint);margin-bottom:10px;font-style:italic;}
+
+.divider-orn{text-align:center;color:var(--accent-deep);font-size:20px;margin:46px 0;letter-spacing:.5em;}
+
+.reading-note{background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:20px 24px;margin:24px 0;font-size:14.5px;color:var(--ink-dim);}
+.reading-note b{color:var(--ink);}
+
+/* Pāṇinian sūtra display */
+.panini-block{
+  background:var(--bg-card);border:1px solid var(--rule);border-radius:4px;padding:20px 24px;margin:24px 0;
+}
+.panini-block .pb-sutra{font-family:var(--display);font-size:20px;color:var(--sanskrit);margin-bottom:6px;}
+.panini-block .pb-ref{font-size:12px;color:var(--ink-faint);letter-spacing:.05em;text-transform:uppercase;margin-bottom:10px;}
+.panini-block .pb-translit{font-style:italic;color:var(--ink-dim);font-size:14.5px;margin-bottom:8px;}
+.panini-block .pb-gloss{font-size:14.5px;color:var(--ink);}
+
+/* Nyāya sixteen categories */
+.padarthas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:26px 0;}
+.padartha-card{background:var(--bg-card);border:1px solid var(--rule);border-radius:3px;padding:14px 16px;}
+.padartha-card .pc-num{font-size:11px;color:var(--ink-faint);letter-spacing:.05em;display:block;margin-bottom:4px;}
+.padartha-card .pc-sanskrit{font-family:var(--display);font-size:18px;color:var(--sanskrit);display:block;margin-bottom:3px;}
+.padartha-card .pc-roman{font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:8px;}
+.padartha-card .pc-def{font-size:13.5px;color:var(--ink-dim);}
+
+/* The five means of inference */
+.inference-track{margin:26px 0;}
+.inference-step{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px;}
+.inference-step .is-label{
+  min-width:110px;background:var(--bg-card);border:1px solid var(--rule);border-radius:3px;
+  padding:10px 12px;text-align:center;flex-shrink:0;
+}
+.inference-step .isl-sanskrit{font-family:var(--display);font-size:15px;color:var(--sanskrit);display:block;}
+.inference-step .isl-roman{font-size:10px;color:var(--ink-faint);text-transform:uppercase;display:block;}
+.inference-step .is-body{flex:1;font-size:14.5px;color:var(--ink-dim);padding-top:10px;}
+.inference-connector{padding-left:52px;color:var(--accent-soft);font-size:16px;margin:-6px 0;}
+
+/* Sphoṭa diagram */
+.sphota-diagram{margin:26px 0;display:flex;align-items:center;gap:0;flex-wrap:wrap;}
+.sphota-box{
+  flex:1;min-width:120px;background:var(--bg-card);border:1px solid var(--rule);
+  padding:16px;text-align:center;border-radius:3px;
+}
+.sphota-box .sb-sanskrit{font-family:var(--display);font-size:18px;color:var(--sanskrit);display:block;margin-bottom:4px;}
+.sphota-box .sb-label{font-size:12px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em;display:block;}
+.sphota-arrow{color:var(--accent-soft);font-size:22px;padding:0 10px;align-self:center;}
+
+.glossterm{font-family:var(--display);color:var(--sanskrit);font-size:17px;}
+dl.glossary dt{margin-top:22px;}
+dl.glossary dd{color:var(--ink-dim);font-size:14.5px;margin:6px 0 0;}
+
+.footnotes{font-size:14.5px;color:var(--ink-dim);}
+.footnotes li{margin-bottom:14px;}
+
+footer.papertail{text-align:center;padding:48px 24px 80px;border-top:1px solid var(--rule);margin-top:60px;}
+footer.papertail .om{font-size:24px;color:var(--accent);margin-bottom:14px;}
+footer.papertail .omtatsat{font-size:14px;color:var(--ink-faint);font-style:italic;margin-bottom:30px;}
+footer.papertail .stamp{font-size:13px;color:var(--ink-faint);line-height:1.9;}
+footer.papertail .stamp b{color:var(--ink-dim);}
+
+@media(max-width:600px){
+  body{font-size:16.5px;}
+  .title-block h1{font-size:30px;}
+  .title-block h2.subtitle{font-size:18px;}
+  h2.sectiontitle{font-size:24px;}
+  .sphota-diagram{flex-direction:column;align-items:stretch;}
+  .sphota-arrow{transform:rotate(90deg);align-self:center;}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="brand">Cultural Musings</div>
+  <div class="platform-sub">Vedic &amp; Śāstric Research Platform</div>
+  <div class="series-tag">Series B · Part Seven of Twelve</div>
+  <div class="devanagari-strip">व्याकरणम् · न्यायः · स्फोटः · अनुमानम् · प्रमाणम् · वाक्यपदीयम् · पक्ष-हेतु-दृष्टान्त · विवेकख्यातिः · शास्त्रसंस्था</div>
+
+  <nav class="toc" aria-label="This paper">
+    <a href="#series-context">Series Context</a>
+    <a href="#abstract">Abstract</a>
+    <a href="#sec-1">I. The Proliferation of Śāstra</a>
+    <a href="#sec-2">II. Pāṇini's Aṣṭādhyāyī: The Grammar of Discrimination</a>
+    <a href="#sec-3">III. The Metalanguage of Sanskrit Grammar</a>
+    <a href="#sec-4">IV. Sphoṭa: The Word-Meaning Unit and Its Implications</a>
+    <a href="#sec-5">V. Bhartṛhari and the Vākyapadīya</a>
+    <a href="#sec-6">VI. Nyāya-Sūtra: The Sixteen Padārthas</a>
+    <a href="#sec-7">VII. Anumāna: The Five-Membered Inference and Its Logic</a>
+    <a href="#sec-8">VIII. Pramāṇa-Theory: The Canonical Sources of Valid Knowledge</a>
+    <a href="#sec-9">IX. Vyākaraṇa and Nyāya as Institutional Frameworks</a>
+    <a href="#sec-10">X. The Yogically-Formed Citta as the Instrument of Śāstric Discrimination</a>
+    <a href="#sec-11">XI. Limits and the Forward Problem</a>
+    <a href="#sec-12">XII. Forward to Part Eight</a>
+    <a href="#footnotes">Footnotes</a>
+    <a href="#bibliography">Bibliography</a>
+    <a href="#glossary">Glossary</a>
+  </nav>
+
+  <nav class="allparts" aria-label="Series B — all parts">
+    <a href="#">Part I · Vāk</a> ·
+    <a href="#">Part II · Śabda-Bheda</a> ·
+    <a href="#">Part III · Sāma Veda</a> ·
+    <a href="#">Part IV · Nāṭyaśāstra I</a> ·
+    <a href="#">Part V · Nāṭyaśāstra II</a> ·
+    <a href="#">Part VI · Yoga-Śāstra</a> ·
+    <span class="current">Part VII · Proliferation I: Vyākaraṇa, Nyāya</span> ·
+    <a href="#">Part VIII · Proliferation II</a> ·
+    <a href="#">Part IX · Mantra-Śāstra</a> ·
+    <a href="#">Part X · Case Studies</a> ·
+    <a href="#">Part XI · Dharma and Adharma</a> ·
+    <a href="#">Part XII · Pratiprasava</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="title-block">
+    <div class="kicker">Series B · Part VII of XII · White Paper</div>
+    <h1>Proliferation I: Vyākaraṇa and Nyāya</h1>
+    <h2 class="subtitle">The Yogically-Formed Citta as the Instrument of Śāstric Discrimination — Pāṇini's Grammar, Bhartṛhari's Sphoṭa-Theory, and the Nyāya School's Systematic Account of Valid Inference as the Two Primary Disciplines through which Discriminative Knowledge Achieves Public, Transmissible Form</h2>
+    <div class="meta-grid">
+      <span><b>Series</b> B · Part VII of XII</span>
+      <span><b>Vāk Level</b> Madhyamā — the intermediate speech level where thought achieves structured, internally-organised form prior to vaikharī externalisation</span>
+      <span><b>Format</b> White Paper · 65 Pages</span>
+      <span><b>Predecessor</b> Series B · Part VI — Yoga-Śāstra: Citta-Vṛtti and Disciplined Attention</span>
+    </div>
+  </div>
+
+  <div class="ornament">↗</div>
+
+  <section id="series-context" class="context-box">
+    <h3>Where Part Seven Stands in the Series</h3>
+    <p>Part Six closed by identifying its third limit as the gap between viveka-khyāti — the direct, non-discursive discriminative apprehension of the puruṣa-prakṛti distinction by a yogically-formed citta — and śāstric knowledge as discursive, grammatically-structured, logically-organised, and institutionally-transmissible understanding. The Yoga-śāstric account provides the deepest psychological account of what the discriminating instrument is and how it is formed; but it does not provide the account of what that instrument produces when it operates within the specifically linguistic and inferential frameworks through which discriminative knowledge becomes public property rather than private achievement. Part Seven exists because those frameworks — vyākaraṇa (grammar) and nyāya (logic and epistemology) — are themselves full śāstric systems with their own technical depth, their own foundational figures (Pāṇini and Akṣapāda Gautama, respectively), and their own ways of articulating the relationship between the forms of thought and the forms of language that this series has been developing since Part One's account of Vāk.</p>
+
+    <p>The specific problem that vyākaraṇa and nyāya exist to address is the problem Part Six Section 11.3 named precisely: the vikalpa-vṛtti's capacity to generate internally coherent verbal constructions that have no extra-linguistic referents — "square circles," "hare's horns," and, at the philosophically most consequential level, subtly erroneous metaphysical constructions (like the misidentification of puruṣa and citta that avidyā produces) that are linguistically well-formed and internally coherent but false. The risk of language's productive capacity is not merely academic; it is the risk that a tradition organised around the transmission of precise knowledge through linguistic means runs constantly, and that both Pāṇini's grammar and the Nyāya school's logic-and-epistemology system exist to manage with systematic technical precision.</p>
+
+    <h4>The Handoff Points from Part Six</h4>
+    <p>Three handoff points determine Part Seven's structure. First, Part Six's account of the vikalpa-vṛtti (Section III of Part Six) established the specific cognitive risk that śāstric grammar and logic exist to address: the risk of verbal constructions that generate pseudo-knowledge through linguistic productivity divorced from perceptual and inferential grounding. Second, Part Six's identification of the yogically-formed citta as the instrument through which discriminative knowledge becomes maximally reliable (Section X of Part Seven's subject-matter) establishes the relationship between discipline and śāstric competence: the practitioner who applies Pāṇini's grammatical metalanguage or Gautama's inference-theory with full command is, in the tradition's implicit psychology, a practitioner whose citta has achieved sufficient ekāgratā (one-pointedness) to hold the relevant formal structures in clear focus long enough for their discriminative application to be reliable. Third, Part Six's account of the saṃskāra-formation process (Section VIII of Part Six) establishes the mechanism through which years of grammatical or logical training deposits the relevant discriminative capacities as stable saṃskāras — cognitive habits of precision — in the citta, making the expert grammarian's or logician's discriminative responses as automatic and reliable as the trained performer's abhinaya-responses.
+
+    <table class="partmap">
+      <tr><th>Part</th><th>Psychological Stage</th><th>Focus</th></tr>
+      <tr><td>I</td><td>Pre-differentiated awareness</td><td>Vāk as Ground</td></tr>
+      <tr><td>II</td><td>Differentiation / discernment</td><td>Śabda-Bheda</td></tr>
+      <tr><td>III</td><td>Feeling-toned cognition</td><td>Sāma Veda</td></tr>
+      <tr><td>IV</td><td>Aesthetic embodiment</td><td>Nāṭyaśāstra I: Rasa</td></tr>
+      <tr><td>V</td><td>Somatic cognition</td><td>Nāṭyaśāstra II: Abhinaya</td></tr>
+      <tr><td>VI</td><td>Self-regulation / will</td><td>Yoga-Śāstra</td></tr>
+      <tr><td class="this-paper">VII</td><td class="this-paper">Specialised cognition</td><td class="this-paper">This Paper — Proliferation I: Vyākaraṇa, Nyāya</td></tr>
+      <tr><td>VIII</td><td>Social/embodied extension</td><td>Proliferation II: Arthaśāstra, Āyurveda</td></tr>
+      <tr><td>IX</td><td>Recursive self-application</td><td>Mantra-Śāstra</td></tr>
+      <tr><td>X</td><td>Applied/historical synthesis</td><td>Case Studies</td></tr>
+      <tr><td>XI</td><td>Ethical-metaphysical synthesis</td><td>Dharma and Adharma</td></tr>
+      <tr><td>XII</td><td>Closing return</td><td>Pratiprasava</td></tr>
+    </table>
+  </section>
+
+  <div class="ornament">✦</div>
+
+  <section id="abstract">
+    <h2 class="sectiontitle" style="font-size:24px;">Abstract</h2>
+    <p>This paper develops, across twelve sections, a full technical and philosophical reconstruction of vyākaraṇa and nyāya as the two primary śāstric disciplines through which the yogically-formed citta's discriminative capacity achieves public, transmissible, institutionally-reproducible form. The paper proceeds as follows. First, it establishes the concept of "śāstric proliferation" — the process by which the tradition's foundational insight into the relationship between sound, meaning, and cognition (developed across Parts I–III as the Vāk-to-Śabda progression) generates, through systematic technical elaboration in specialised domains, the family of śāstric disciplines that constitute classical Indian intellectual culture's characteristic achievement. Second, it reconstructs Pāṇini's Aṣṭādhyāyī's architecture — 3,959 sūtras in fourteen adhyāyas, organised through the Śiva-sūtras' fourteen pratyāhāra-defining phonemic groups — as the systematic grammar of Sanskrit that constitutes both the world's first generative grammar and the tradition's most ambitious attempt to capture, in a finite set of rules, the complete generative capacity of natural language. Third, it develops the Aṣṭādhyāyī's metalanguage — the technical device-vocabulary of it, anuvṛtti, adhikāra, paribhāṣā, and others — as a system of compressed rule-formulation whose economy of means is the grammatical system's analogue of the Yogasūtra's sūtra-compression, and whose operation requires a trained citta capable of holding the entire rule-system's relevant portions in active working memory simultaneously. Fourth, it examines the sphoṭa-theory — the doctrine, developed from hints in Pāṇini through Bhartṛhari's Vākyapadīya to the major Mīmāṃsā and Nyāya debates about śabda's permanent or impermanent nature — as the tradition's most sustained account of what a word is in itself: not the physical sound-sequence that is its vehicle but the unitary, indivisible meaning-bearing unit that the sound-sequence reveals, whose philosophical implications extend directly into the series' account of Vāk's levels. Fifth, it examines Bhartṛhari's Vākyapadīya in detail — particularly the pratibhā-concept (the flash of integrated understanding, the sentence-meaning's sudden, holistic apprehension) — as the philosophical culmination of the grammatical tradition's engagement with the relationship between linguistic structure and the moment of understanding. Sixth, it reconstructs the Nyāya-Sūtra of Akṣapāda Gautama as the foundational text of the nyāya (analytic reasoning) tradition, developing its sixteen padārthas (categories of philosophical analysis) as a complete taxonomy of the elements required for rigorous philosophical debate and valid knowledge-production. Seventh, it develops the five-membered nyāya inference (pratijñā, hetu, udāharaṇa, upanaya, nigamana) as both a formal logical structure and a pedagogical tool for making the move from particular observation to general conclusion reliable and publicly verifiable. Eighth, it examines the pramāṇa-theory the Nyāya system develops — four sources of valid knowledge (pratyakṣa, anumāna, upamāna, śabda) — in relationship to the Yoga-śāstric account of the vṛtti-types and the conditions under which each pramāṇa-type operates reliably or unreliably. Ninth, it addresses vyākaraṇa and nyāya as institutional frameworks — systems of training, examination, debate, and transmission — through which the discriminative capacities they develop become socially distributed rather than individually-held achievements. Tenth, it develops the series' central argument for Part Seven: that the yogically-formed citta and the śāstrically-trained citta are complementary rather than competing accounts of what a well-formed discriminative instrument is, and that the tradition's implicit ideal is their conjunction in a practitioner whose yogic depth of attentional formation is matched by śāstric precision of discriminative knowledge. Eleventh, it specifies three limits preparing Part Eight's engagement with Arthaśāstra and Āyurveda. Twelfth, it executes the handoff.</p>
+
+    <div class="reading-note">
+      <b>Reading Note</b> — This paper develops vyākaraṇa and nyāya from their own technical foundations. Part Two's account of Pāṇini and śabda-bheda is presupposed as an introduction, but Part Seven's treatment is substantially more technically detailed than Part Two's. The Yoga-śāstric framework developed in Part Six — particularly the vikalpa-vṛtti, the citta-formation account, and the saṃskāra-model — is presupposed throughout and is the bridge through which Parts VI and VII are structurally connected.
+    </div>
+  </section>
+
+  <h1 class="sectionhead" id="sec-1">I.</h1>
+  <h2 class="sectiontitle">The Proliferation of Śāstra: From Foundational Insight to Specialised Discipline</h2>
+
+  <h3>1.1 What "Proliferation" Names</h3>
+  <p>The term "proliferation" in this paper's title names a specific intellectual-historical process: the process by which a foundational insight — in this series' account, the Vedic insight into the relationship between sound, meaning, cognition, and reality that Part One reconstructed through the Vāk-concept — generates, through the sustained, technically-rigorous elaboration of its implications in specific domains, a family of distinct śāstric disciplines that are simultaneously autonomous (each has its own technical vocabulary, its own founding texts, its own lineage of trained specialists) and genealogically related (each is a systematic working-out of implications already present in the foundational insight, made possible by the prior elaborations of adjacent disciplines). The metaphor of proliferation is deliberately biological: the śāstric disciplines proliferate from a shared root in the way a plant's branches proliferate from its root-system — each branch reaching toward a different domain of available light, each developing its own form and structure, but each drawing nourishment from the same root and contributing its own products back to the shared organism of the tradition.</p>
+
+  <p>The particular proliferation-pattern this paper examines — Vedic phonology and hermeneutics generating Pāṇinian grammar, which generates Bhartṛhari's philosophy of language, which exists in productive tension with the Mīmāṃsā tradition's śabda-account, which in turn debates with the Nyāya tradition's pramāṇa-theory — is not a historical accident but a structural necessity: each discipline's elaboration of a domain of the foundational insight necessarily raises questions it cannot answer from within its own technical resources, and those unanswered questions motivate the adjacent discipline's development. Part Two's account of Pāṇini established the point at which phonological analysis required a grammatical system to complete it; the present paper establishes the points at which grammatical analysis requires a philosophy of language (sphoṭa-theory) and a formal logic of valid inference (nyāya) to address the problems grammar's own success generates.</p>
+
+  <h3>1.2 The Vedāṅgas as the First Proliferation</h3>
+  <p>The śāstric proliferation's first documented stage is the six Vedāṅgas — the "limbs of the Veda" — whose development, according to the tradition's own historiography, was motivated by the practical necessity of preserving the Vedic texts' phonemic integrity and hermeneutic accessibility across generations of oral transmission. The six are: śikṣā (phonetics and pronunciation), chandas (metre), vyākaraṇa (grammar), nirukta (etymology and lexical interpretation), jyotiṣa (astronomical calculation for ritual timing), and kalpa (ritual procedure). Each addresses a specific domain of technical knowledge required for correct Vedic performance and interpretation; each constitutes an autonomous discipline with its own foundational texts; and together they constitute the institutional framework within which the Vedic tradition's self-perpetuation was managed as a technical-educational enterprise rather than a merely custodial one. Part Seven's focus on vyākaraṇa and its philosophical extension into nyāya represents a choice to examine two of the Vedāṅgas' most technically elaborate and philosophically consequential developments — the choice motivated by their direct relevance to the series' central concern with the forms through which discriminative knowledge achieves public, transmissible form.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-2">II.</h1>
+  <h2 class="sectiontitle">Pāṇini's Aṣṭādhyāyī: The Grammar of Complete Discrimination</h2>
+
+  <h3>2.1 The Text's Achievement</h3>
+  <p>Pāṇini's Aṣṭādhyāyī — the "eight-chapter [work]," composed around the fourth century BCE — constitutes one of the greatest intellectual achievements of any civilisation: a complete, generative description of Sanskrit in 3,959 sūtras, organised with a systematic economy of means so extreme that the text, like the Yogasūtra's 196 sūtras, cannot be understood without the tradition of oral commentary and trained specialist interpretation that its composition assumed as its context. Part Two's treatment of the Aṣṭādhyāyī established its foundational significance and its relationship to the Śiva-sūtras; the present section develops its technical architecture at a depth Part Two deferred.</p>
+
+  <p>The Aṣṭādhyāyī's principal formal achievement is its status as the world's first generative grammar in the technically precise sense: a finite system of rules capable of generating all and only the well-formed expressions of the language it describes, with no appeal to lists of particular cases beyond what the rule-system cannot capture more economically. Every sūtra is a rule; every rule is formulated in the minimal phonemic content required to carry its formal information; the sūtras are ordered within and across the eight adhyāyas in a sequence specifically designed to maximise the formal work each rule can do through the anuvṛtti (carryover) mechanism, whereby a rule's elements remain operative in subsequent rules until explicitly cancelled — so that the system's economy of expression is not the economy of a list of abbreviations but the economy of a formal system in which each element's contribution is multiplied by the number of subsequent rules it remains active in.</p>
+
+  <h3>2.2 The Śiva-Sūtras and the Pratyāhāra System</h3>
+  <p>The fourteen Śiva-sūtras — the fourteen groups of phonemes (a, i, u; ṛ, ḷ; e, o; ai, au; ha, ya, va, ra; la; ña, ma, ṅa, ṇa, na; jha, bha; gha, ḍha, dha; ja, ba, ga, ḍa, da; kha, pha, cha, ṭha, tha, ca, ṭa, ta; ka, pa; śa, ṣa, sa; ha, la) whose arrangement allows any naturally occurring class of Sanskrit phonemes to be named by a pratyāhāra — a syllable formed from the first member of a group and a marker (it) taken from the end of any subsequent group — provide the Aṣṭādhyāyī's most fundamental formal device. The pratyāhāra system transforms the Śiva-sūtras' linear arrangement into a complete addressing system for phonemic classes, allowing Pāṇini to refer to any phonologically natural class of sounds by a two-syllable name rather than by listing its members. This device is not merely economical in the sense of saving space; it is theoretically significant in the sense that Part Two established: the classes the pratyāhāras name are precisely the phonologically natural classes — the classes that recur as the domains of Sanskrit's phonological rules — whose naturalness is itself a fact about Sanskrit's phonological system rather than about Pāṇini's classificatory preferences.</p>
+
+  <div class="panini-block">
+    <div class="pb-sutra">वृद्धिरादैच्</div>
+    <div class="pb-ref">Aṣṭādhyāyī I.1.1</div>
+    <div class="pb-translit">vṛddhir ādaic</div>
+    <div class="pb-gloss">The term vṛddhi [designates] the sounds ā, ai, au. — The Aṣṭādhyāyī's first sūtra, establishing one of the text's two primary technical terms (vṛddhi and guṇa) for the two principal ablaut-grades of Sanskrit vowels. Its single-line form illustrates the sūtra-style's economy: the technical term (vṛddhi), the pratyāhāra naming the relevant phonemes (ādaic = ā, ai, au, derived from the Śiva-sūtras via the pratyāhāra mechanism), and the implicit definition (vṛddhi = the sounds named by ādaic) in five syllables of Sanskrit.</div>
+  </div>
+
+  <div class="panini-block">
+    <div class="pb-sutra">अकः सवर्णे दीर्घः</div>
+    <div class="pb-ref">Aṣṭādhyāyī VI.1.101</div>
+    <div class="pb-translit">akaḥ savarṇe dīrghaḥ</div>
+    <div class="pb-gloss">A simple vowel (ak) followed by a homorganic vowel (savarṇa) becomes long (dīrgha). — This sandhi rule, specifying vowel-coalescence across word boundaries and within morphological junctions, illustrates how the pratyāhāra system (ak = short vowels a, i, u, ṛ, ḷ, specified by the Śiva-sūtras) enables a single three-word sūtra to govern the behaviour of five distinct short vowels in the same phonological environment.</div>
+  </div>
+
+  <h3>2.3 The Aṣṭādhyāyī's Metalanguage: How Rules Talk About Rules</h3>
+  <p>The Aṣṭādhyāyī's most technically demanding feature — and the feature most directly relevant for Part Seven's argument about the citta-requirements of śāstric discrimination — is its metalanguage: the system of technical devices through which the rules talk about themselves and about each other in ways that enable the rule-system's economy. The primary metalinguistic devices are: anuvṛtti (carryover), whereby a rule's constituent elements remain operative in subsequent rules in the same or adjacent adhyāyās until cancelled; adhikāra (heading or governing domain), whereby certain sūtras function as section-headings whose content is understood to govern all subsequent sūtras in their domain; and paribhāṣā (interpretive maxims), meta-rules that govern the application of object-level rules in cases of conflict or ambiguity. The paribhāṣās are particularly significant: they are not rules about Sanskrit but rules about rules about Sanskrit, specifying how the rule-system itself is to be interpreted and applied. Their existence demonstrates that the Aṣṭādhyāyī is not merely a descriptive inventory of Sanskrit's grammatical facts but a formal system whose self-description — whose account of how it is to be used — is itself a technically rigorous component of the system's design.</p>
+
+  <p>The citta-requirements of competent Aṣṭādhyāyī-application are substantial. A practitioner applying a specific rule to a specific linguistic form must simultaneously: identify the form's constituent phonemes and their phonemic class-memberships (which requires the Śiva-sūtras' pratyāhāra-system to be active in memory); identify which sūtra governs the relevant operation; determine which anuvṛtti-elements from preceding sūtras remain active in the current sūtra's domain; check for any adhikāra that governs the current rule's scope; and apply any relevant paribhāṣās to handle conflict or ambiguity between the current rule and any of its competitors in the rule-system's other sections. This is a complex, multi-layered, simultaneously-active cognitive operation that requires precisely the kind of concentrated, multi-element working-memory management that Part Six's account of dhāraṇā described as the inner triad's first achievement — the difference being that the object of the grammarian's dhāraṇā is not a single perceptual or imaginative object but the formal structure of a rule-system, and the dhyāna it approaches is not the unbroken absorption in a single object but the unbroken, simultaneous availability of the entire relevant rule-system's structure to the expert practitioner's active cognitive attention.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-3">III.</h1>
+  <h2 class="sectiontitle">The Metalanguage of Grammar: Devices, Economy, and the Trained Citta</h2>
+
+  <h3>3.1 It-Markers and the Scope of Technical Terms</h3>
+  <p>The Aṣṭādhyāyī employs a specific class of technical markers — its (singular: it), which are phonemic segments attached to roots, suffixes, or grammatical elements within the rule-system to signal technical functions rather than to represent any phoneme of the object-language Sanskrit itself. An it-marker may signal: that a suffix triggers a specific additional operation (like the lengthening of the preceding vowel, or the addition of a specific augment); that a root or stem belongs to a specific conjugation-class; or that a specific morphological junction-environment triggers a specific phonological rule. The its are "erased" in the actual derived form — they are instructions to the rule-system, not sounds in the output — and their correct identification in a given sūtra is a prerequisite for the sūtra's correct application.</p>
+
+  <p>The it-marker system is, structurally, a metalinguistic level: a set of signals embedded within the language of the rules that govern how those rules are to be processed, rather than signals about the object-language Sanskrit itself. Part Two's account of śabda-bheda established that the Indian grammatical tradition was from its earliest stages sensitive to the distinction between the primary linguistic level (the language described) and the metalinguistic level (the language used to describe it); the Aṣṭādhyāyī's it-marker system is the fullest and most technically sophisticated realisation of that metalinguistic awareness in the tradition's grammatical literature.</p>
+
+  <h3>3.2 Blocking and the Principle of Specificity</h3>
+  <p>One of the Aṣṭādhyāyī's most theoretically significant organisational principles — and one of its primary contributions to formal linguistics' subsequent history — is the principle of specificity (nitya/anitya, utsarga/apavāda — general/specific, rule/exception): when two rules that could both apply in a given environment are in apparent conflict, the more specific rule (apavāda) blocks the more general one (utsarga), and the more specific rule's output is the correct derivation. This principle, along with the related paribhāṣā "the specific (apavāda) supersedes the general (utsarga)," constitutes the Aṣṭādhyāyī's primary mechanism for handling the inevitable conflicts that arise in any finite rule-system applied to the full complexity of a natural language's morphological and phonological behaviour. Its philosophical significance extends beyond formal linguistics: the principle that specific knowledge supersedes general knowledge in cases of conflict — that a more precisely characterised instance of a category takes precedence over the category's general characterisation — is a principle of discriminative reasoning whose application extends across all the śāstric disciplines Part Seven is examining, and whose deepest philosophical expression is precisely the viveka-khyāti that Part Six identified as the Yoga-śāstric practice's culminating cognitive achievement: the most specific possible discrimination (puruṣa from prakṛti at the level of their ultimate nature) blocking all less specific discriminations that would confuse them.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-4">IV.</h1>
+  <h2 class="sectiontitle">Sphoṭa: The Word-Meaning Unit and the Philosophy of Linguistic Reference</h2>
+
+  <h3>4.1 The Problem Sphoṭa-Theory Addresses</h3>
+  <p>The sphoṭa-theory — most fully developed by Bhartṛhari in the Vākyapadīya (fifth century CE), though anticipations are found in Pāṇini's own notation and in the Mahābhāṣya of Patañjali the grammarian (distinct from Patañjali the Yoga-śāstra author) — addresses a specific and genuinely difficult problem about linguistic reference: what exactly is it that carries meaning in language? The obvious candidate answer — the particular, physically-realised sound-sequence that a speaker produces on a given occasion — immediately faces a set of problems. Two different speakers' utterances of the same word are physically distinct sound-sequences (different fundamental frequencies, different durations, different timbres), yet they carry the same meaning. The same speaker's two successive utterances of the same word are also physically distinct sound-sequences. The physically-produced sound-sequence is, moreover, a temporal entity whose successive phonemes are produced and vanish in sequence; no two phonemes of a polysyllabic word are simultaneously present in the physical sound-stream, yet the word's meaning is grasped as a unity, not as a sequence of discrete meanings. What, then, is the stable, identical, meaning-bearing entity that different physical utterances of the same word all reveal or instantiate?</p>
+
+  <div class="sphota-diagram">
+    <div class="sphota-box">
+      <span class="sb-sanskrit">ध्वनि</span>
+      <span class="sb-label">Dhvani · Physical Sound</span>
+    </div>
+    <div class="sphota-arrow">→</div>
+    <div class="sphota-box">
+      <span class="sb-sanskrit">स्फोट</span>
+      <span class="sb-label">Sphoṭa · Revealed Word-Unit</span>
+    </div>
+    <div class="sphota-arrow">→</div>
+    <div class="sphota-box">
+      <span class="sb-sanskrit">अर्थ</span>
+      <span class="sb-label">Artha · Meaning</span>
+    </div>
+  </div>
+
+  <p>Sphoṭa is the tradition's answer: the word, in itself, is not the physical sound-sequence (dhvani) but the unitary, indivisible, meaning-bearing entity that the physical sound-sequence reveals (sphūṭayati — "makes manifest"). Sphoṭa is eternal (nitya) and unchanging — different physical utterances of the same word do not produce different sphoṭas but manifest the same sphoṭa through different physical vehicles. The sphoṭa is what a hearer grasps when they understand a word, regardless of the specific physical characteristics of the utterance that occasions that grasp. And it is the sphoṭa — not the dhvani — whose relationship to artha (meaning) constitutes the linguistic sign's proper account, because it is the sphoṭa that is stable, identical across utterances, and directly connected to the meaning its physical vehicle reveals.</p>
+
+  <h3>4.2 Sphoṭa and the Vāk-Levels of Part One</h3>
+  <p>The sphoṭa-theory's philosophical significance for this series is most clearly visible when it is set in relationship to Part One's account of Vāk's four levels (parā, paśyantī, madhyamā, vaikharī). The vaikharī level — the level of physically-produced, heard speech — is precisely the dhvani-level at which the physical sound-sequence is produced and received: the level of manifested, differentiated, temporally-extended speech. The sphoṭa exists, in Bhartṛhari's account, at the madhyamā level — the level of internally-organised, pre-vocalised, structurally complete speech-intention that a speaker holds prior to its vaikharī externalisation, and that a hearer grasps in the act of understanding beyond the vaikharī sound-stream through which that understanding is occasioned. The connection establishes that the sphoṭa-theory is not an isolated grammatical-philosophical speculation but the grammatical tradition's articulation of a principle already present in the Vedic Vāk-analysis: the principle that the fully meaning-bearing level of language is not the level of physical sound but the level of structured, intentional, meaning-organised speech that the physical sound vehicle reveals to a competent hearer.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-5">V.</h1>
+  <h2 class="sectiontitle">Bhartṛhari and the Vākyapadīya: Sentence, Flash, and the Limit of Grammatical Analysis</h2>
+
+  <h3>5.1 The Sentence as the Primary Linguistic Unit</h3>
+  <p>Bhartṛhari's Vākyapadīya — the "treatise on sentences and words" — is the philosophical culmination of the grammatical tradition's engagement with the sphoṭa-problem and its implications. Its central philosophical claim, argued across three kāṇḍas (books) of sustained technical and philosophical analysis, is that the sentence (vākya), not the word (pada), is the primary linguistic unit — the unit that is, in itself, meaning-bearing in the fullest sense — and that words are abstractions from sentences rather than the other way around. This claim directly inverts the compositional picture of language's meaning-structure that might seem most natural (sentences mean what they mean because of the meanings of their component words, combined according to syntactic rules); Bhartṛhari argues instead that words' meanings are always already understood in the context of the sentences in which they occur, and that the "meanings" of individual words abstracted from sentence-context are theoretical constructs of the grammarian's metalinguistic analysis rather than independently-grasped semantic entities.</p>
+
+  <h3>5.2 Pratibhā: The Flash of Understanding</h3>
+  <p>The concept that is Bhartṛhari's most philosophically distinctive contribution — and the concept most directly relevant for this series' account of the relationship between linguistic structure and the moment of genuine understanding — is pratibhā, sometimes translated as "linguistic intuition" or "flash of understanding" but most precisely characterised as: the holistic, instantaneous, non-sequential apprehension of a sentence's complete meaning that occurs in the hearer at the moment of genuine understanding, beyond the temporal sequence of the sentence's physical utterance and beyond the analytical sequence of the hearer's word-by-word processing. Pratibhā is the cognitive event in which the sentence's meaning arrives as a whole — a Gestalt of significance, not a sum of component word-meanings — and it is, in Bhartṛhari's account, the linguistic-cognitive event that is most directly the counterpart of the Yoga-śāstric samāpatti's moment of the object's sudden shining-forth in transparent absorption: the hearer's citta "falls into" the sentence's meaning in the same way the yogin's citta falls into its object in nirvitarka samāpatti — the verbal-conceptual overlay cleared, the meaning itself present as immediate apprehension rather than as the output of an analytical process.</p>
+
+  <div class="formula-box">
+    <div class="formula-main">वाक्यस्फोट → प्रतिभा → अर्थसाक्षात्कार</div>
+    <div class="formula-translit">vākya-sphoṭa → pratibhā → artha-sākṣātkāra</div>
+    <div class="formula-note">The sentence's unitary meaning-unit (vākya-sphoṭa) occasions, in a competent hearer's citta, the flash of holistic understanding (pratibhā) that is the direct apprehension (sākṣātkāra) of the sentence's artha — parallel, in structure and in the quality of immediacy and holistic grasp it involves, to the nirvitarka-samāpatti's transparent absorption in an object's own form. The grammarian's highest technical achievement is the analysis that makes pratibhā reliable; the moment of pratibhā itself exceeds analytical control and is, like samādhi, something that analysis can prepare but cannot produce.</div>
+  </div>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-6">VI.</h1>
+  <h2 class="sectiontitle">Nyāya-Sūtra: The Sixteen Padārthas of Philosophical Analysis</h2>
+
+  <h3>6.1 Nyāya's Foundational Concern</h3>
+  <p>The Nyāya-Sūtra of Akṣapāda Gautama (approximately second century CE) — with the extensive and philosophically rich Bhāṣya of Vātsyāyana as its primary authorised commentary — establishes nyāya (literally: that which leads to a conclusion, rule of reasoning, correct procedure) as the tradition's systematic account of valid philosophical argumentation and valid knowledge-production. Where vyākaraṇa addresses the linguistic form of knowledge-statements (what makes a Sanskrit sentence well-formed), nyāya addresses their epistemic credentials (what makes a knowledge-claim valid and what makes it invalid). The two disciplines are complementary at the most fundamental level: a claim must be linguistically well-formed to be assessable at all (vyākaraṇa's domain) and must be epistemically grounded to count as knowledge rather than mere assertion (nyāya's domain); the tradition that trains practitioners in both is equipping them with the full discriminative apparatus that valid knowledge-production requires.</p>
+
+  <div class="padarthas-grid">
+    <div class="padartha-card">
+      <span class="pc-num">1</span>
+      <span class="pc-sanskrit">प्रमाण</span>
+      <span class="pc-roman">Pramāṇa</span>
+      <p class="pc-def">Valid sources of knowledge: pratyakṣa (perception), anumāna (inference), upamāna (comparison/analogy), śabda (testimony). The four instruments through which valid knowledge is legitimately obtained.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">2</span>
+      <span class="pc-sanskrit">प्रमेय</span>
+      <span class="pc-roman">Prameya</span>
+      <p class="pc-def">Objects of valid knowledge: self, body, senses, sense-objects, cognition, mind, activity, defects, rebirth, fruit of action, suffering, and liberation. The complete domain of what can be known.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">3</span>
+      <span class="pc-sanskrit">संशय</span>
+      <span class="pc-roman">Saṃśaya</span>
+      <p class="pc-def">Doubt: the cognitive state in which multiple, competing cognitions of the same object are simultaneously present without resolution. The condition that motivates inquiry and whose resolution constitutes knowledge's achievement.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">4</span>
+      <span class="pc-sanskrit">प्रयोजन</span>
+      <span class="pc-roman">Prayojana</span>
+      <p class="pc-def">Purpose or motive: the aim toward which inquiry is directed, whose specification is required for inquiry to be properly organised and its conclusion evaluable as success or failure.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">5</span>
+      <span class="pc-sanskrit">दृष्टान्त</span>
+      <span class="pc-roman">Dṛṣṭānta</span>
+      <p class="pc-def">Illustrative example: the particular case (the kitchen, the fire, the smoke) that grounds the inference's general claim in observed fact and makes the inference's logical structure publicly verifiable.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">6</span>
+      <span class="pc-sanskrit">सिद्धान्त</span>
+      <span class="pc-roman">Siddhānta</span>
+      <p class="pc-def">Established doctrine: claims already accepted as valid by the relevant śāstric tradition, serving as the agreed background against which new claims are assessed. The institutional memory of established knowledge.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">7</span>
+      <span class="pc-sanskrit">अवयव</span>
+      <span class="pc-roman">Avayava</span>
+      <p class="pc-def">The members or limbs of the syllogism: the five-membered structure (pratijñā, hetu, udāharaṇa, upanaya, nigamana) through which a valid inference is articulated in its complete, publicly-checkable form.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">8</span>
+      <span class="pc-sanskrit">तर्क</span>
+      <span class="pc-roman">Tarka</span>
+      <p class="pc-def">Hypothetical reasoning: the reductio-type argument that establishes a claim's validity by demonstrating the absurdity of its denial. A secondary instrument of valid reasoning, not itself a pramāṇa but a support for inference.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">9</span>
+      <span class="pc-sanskrit">निर्णय</span>
+      <span class="pc-roman">Nirṇaya</span>
+      <p class="pc-def">Decisive conclusion: the resolution of doubt through the application of the pramāṇas to the inquiry's object, resulting in a stable cognitive state of established knowledge rather than the oscillating state of saṃśaya.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">10</span>
+      <span class="pc-sanskrit">वाद</span>
+      <span class="pc-roman">Vāda</span>
+      <p class="pc-def">Sincere philosophical debate: the form of argumentative exchange in which both parties are genuinely interested in reaching the correct conclusion and accept the pramāṇas and avayavas as binding constraints. Distinguished from jalpa and vitaṇḍā.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">11</span>
+      <span class="pc-sanskrit">जल्प</span>
+      <span class="pc-roman">Jalpa</span>
+      <p class="pc-def">Disputatious debate: argumentative exchange in which a party is motivated by the desire to win rather than by the desire to reach truth, permitting the use of sophistical techniques (chala, jāti, nigrahasthāna) not available in vāda.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">12</span>
+      <span class="pc-sanskrit">वितण्डा</span>
+      <span class="pc-roman">Vitaṇḍā</span>
+      <p class="pc-def">Destructive debate: the form in which a party's aim is purely to refute the opponent's position without advancing any position of one's own. Logically parasitic, but recognised as a real phenomenon in the tradition of philosophical exchange.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">13</span>
+      <span class="pc-sanskrit">हेत्वाभास</span>
+      <span class="pc-roman">Hetvābhāsa</span>
+      <p class="pc-def">Fallacious reasons: the five varieties of defective hetu (erratic, contradictory, equal-and-opposite, unproven, mistimed) that produce the appearance of valid inference without its reality. The taxonomy of formal fallacies.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">14</span>
+      <span class="pc-sanskrit">छल</span>
+      <span class="pc-roman">Chala</span>
+      <p class="pc-def">Sophistical objection: the illegitimate technique of intentionally misinterpreting an opponent's words (by taking a term in a non-intended sense) to produce the appearance of refutation without genuinely engaging the opponent's argument.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">15</span>
+      <span class="pc-sanskrit">जाति</span>
+      <span class="pc-roman">Jāti</span>
+      <p class="pc-def">Futile objection: the class of responses to an argument that have the surface form of refutations but that, on analysis, depend on illegitimate analogical extensions or on ignoring the argument's specific logical structure.</p>
+    </div>
+    <div class="padartha-card">
+      <span class="pc-num">16</span>
+      <span class="pc-sanskrit">निग्रहस्थान</span>
+      <span class="pc-roman">Nigrahasthāna</span>
+      <p class="pc-def">Points of defeat: the conditions under which a party in philosophical debate has lost the exchange — misunderstanding the opponent's position, failing to respond to a valid argument, self-contradiction, abandoning one's own thesis. The institutional mechanism for enforcing the rules of valid exchange.</p>
+    </div>
+  </div>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-7">VII.</h1>
+  <h2 class="sectiontitle">Anumāna: The Five-Membered Inference and the Logic of Valid Conclusion</h2>
+
+  <h3>7.1 The Five Members and Their Roles</h3>
+  <p>The nyāya inference's five-membered (pañcāvayava) structure is the tradition's most distinctive formal contribution to the history of logic — distinctive not because five-membered inference is a different logical relationship from the two-premise syllogism of Western Aristotelian logic (the logical relationship is structurally the same) but because the five-membered form includes both the formal components that carry the inference's logical validity and the epistemic-pedagogical components that make the inference's validity publicly verifiable to an audience that was not party to the original observation. The five members are:</p>
+
+  <div class="inference-track">
+    <div class="inference-step">
+      <div class="is-label">
+        <span class="isl-sanskrit">प्रतिज्ञा</span>
+        <span class="isl-roman">Pratijñā</span>
+      </div>
+      <div class="is-body">The thesis: the statement of what is to be proved. "There is fire on the hill." The pratijñā names both the subject (the hill, pakṣa) and the property to be established (fire, sādhya). It is a claim rather than an observation; its status as a claim — something requiring proof — is what motivates the remaining members.</div>
+    </div>
+    <div class="inference-connector">↓</div>
+    <div class="inference-step">
+      <div class="is-label">
+        <span class="isl-sanskrit">हेतु</span>
+        <span class="isl-roman">Hetu</span>
+      </div>
+      <div class="is-body">The reason: the observed property that grounds the inference. "Because there is smoke." The hetu must be present in the pakṣa (the hill really does have smoke), must be found in all cases where the sādhya (fire) is found (vyāpti — universal concomitance), and must be absent in all cases where the sādhya is absent. These three conditions constitute the hetu's formal requirements for validity.</div>
+    </div>
+    <div class="inference-connector">↓</div>
+    <div class="inference-step">
+      <div class="is-label">
+        <span class="isl-sanskrit">उदाहरण</span>
+        <span class="isl-roman">Udāharaṇa</span>
+      </div>
+      <div class="is-body">The illustrative example: both a positive instance (sapakṣa — "wherever there is smoke there is fire, as in the kitchen") and optionally a negative instance (vipakṣa — "wherever there is no fire there is no smoke, as in a lake"). The udāharaṇa makes the vyāpti (universal concomitance between hetu and sādhya) publicly observable rather than merely asserted, grounding the inference's general claim in perceptible particular cases.</div>
+    </div>
+    <div class="inference-connector">↓</div>
+    <div class="inference-step">
+      <div class="is-label">
+        <span class="isl-sanskrit">उपनय</span>
+        <span class="isl-roman">Upanaya</span>
+      </div>
+      <div class="is-body">The application: the explicit subsumption of the pakṣa (the hill) under the general rule established by the udāharaṇa. "The hill is such a case" — connecting the general rule ("smoke implies fire") to the particular case ("this hill has smoke") in an explicit step that could not be omitted without producing a logical gap in the inference's public structure.</div>
+    </div>
+    <div class="inference-connector">↓</div>
+    <div class="inference-step">
+      <div class="is-label">
+        <span class="isl-sanskrit">निगमन</span>
+        <span class="isl-roman">Nigamana</span>
+      </div>
+      <div class="is-body">The conclusion: the restatement of the thesis (pratijñā), now established by the inference's prior members. "Therefore there is fire on the hill." The nigamana's explicit restatement of what the pratijñā asserted closes the inference's logical arc, marking the transition from the pratijñā's status as a claim to its status as an established conclusion — the nirṇaya (decisive resolution of doubt) that the Nyāya system identifies as the goal of valid philosophical inquiry.</div>
+    </div>
+  </div>
+
+  <h3>7.2 Vyāpti: The Universal Concomitance and Its Epistemic Problems</h3>
+  <p>The vyāpti — the universal concomitance between hetu (smoke) and sādhya (fire) that the inference depends on — is the nyāya inference's philosophically most demanding element and the locus of the tradition's most sustained internal debate. The problem is classic: a universal claim (wherever smoke, there fire — always, without exception) cannot be established by any finite number of observed positive instances, because the next instance might be the counterexample that falsifies the universal. The Nyāya tradition's responses to this problem — the debate between those who ground vyāpti-knowledge in a specific perceptual capacity (vyāpti-perception, the direct perceptual grasp of the invariant connection between co-present properties in observed instances) and those who ground it in the repeated accumulation of confirmatory observations combined with the absence of known counterexamples — constitute one of the classical Indian philosophical tradition's deepest and most sustained epistemological debates, and their resolution (or non-resolution) has direct implications for the question of how any śāstric generalisation — including the Nāṭyaśāstra's rasa-assignments and the Yoga-śāstra's citta-formation claims — is epistemically justified.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-8">VIII.</h1>
+  <h2 class="sectiontitle">Pramāṇa-Theory: The Four Sources of Valid Knowledge</h2>
+
+  <h3>8.1 Pratyakṣa: Perception as the Foundational Pramāṇa</h3>
+  <p>The Nyāya-Sūtra's definition of pratyakṣa (perception) specifies it as: indriyārthsannikarṣotpannaṃ jñānam avyapadeśyam avyabhicāri vyavasāyātmakam — "knowledge produced by the contact of a sense-organ with its object, non-linguistic, non-errant, and determinate." Four elements of this definition carry theoretical weight for the series' argument. "Contact of a sense-organ with its object" establishes perception's causal basis in the physical relationship between the sense-faculty and its object-domain — a relationship that the Yoga-śāstric account would locate within the citta's engagement with gross sense-objects through the manas-faculty's coordination of sensory input. "Non-linguistic" (avyapadeśya) specifies that genuine perceptual knowledge is not constituted by its verbal formulation — the perception is distinct from and prior to any linguistic expression of it, establishing a significant distance between the Nyāya account of perception and the philosophical positions (associated with Bhartṛhari's school) that regard all cognition as linguistically-constituted. "Non-errant" (avyabhicāri) specifies that the perception must not be subject to the standard perceptual errors (the rope-snake illusion, the shell-silver illusion) that produce false perceptual appearances. And "determinate" (vyavasāyātmaka) specifies that perceptual knowledge involves a definite judgment — "this is a pot," not merely an undifferentiated sensory input — that is the product of the citta's integration of sensory data rather than of its raw reception.</p>
+
+  <h3>8.2 Anumāna, Upamāna, Śabda: The Three Non-Perceptual Pramāṇas</h3>
+  <p>The three non-perceptual pramāṇas — anumāna (inference), upamāna (comparison or analogical knowledge), and śabda (testimony, literally "word") — extend the domain of valid knowledge-production beyond what direct sensory contact can provide. Anumāna's structure has been developed in Section VII above; its relationship to the Yoga-śāstric account of the citta's discriminative capacity is most clearly visible in the vyāpti-knowledge question: the universal concomitance that a valid inference requires is precisely the kind of stable, reliable, over-instance-general cognitive content that the yogically-formed citta's saṃskāra-structure — enriched by the accumulated discriminative training of sustained śāstric practice — is most capable of holding with confidence. Upamāna (comparison) is the knowledge produced by the recognition of a similarity between an object previously described to the perceiver and an object currently perceived — the traveller who, having been told "a gavaya is like a cow but has a larger body," recognises a gavaya in the forest through its similarity to the cow they already know. Śabda (testimony) is knowledge produced through the reliable testimony of a competent, honest speaker — including, most significantly for the śāstric tradition's self-understanding, the testimony of the Vedic texts themselves, whose authority the Nyāya and Mīmāṃsā traditions debate extensively in terms of whether Veda-testimony is a distinct pramāṇa-type or a species of śabda in general.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-9">IX.</h1>
+  <h2 class="sectiontitle">Vyākaraṇa and Nyāya as Institutional Frameworks for Distributed Discrimination</h2>
+
+  <h3>9.1 The Śāstric Discipline as Social Technology</h3>
+  <p>The individually-achieved discriminative capacities that vyākaraṇa-training and nyāya-training produce — the grammarian's capacity for linguistically precise knowledge-formulation; the logician's capacity for epistemically rigorous knowledge-assessment — are, in both cases, the products of institutional frameworks that are as important as the technical disciplines themselves for the social distribution of discriminative knowledge that the tradition aims at. The gurukula (teacher's household) as the primary educational institution; the debate-hall (śāstrārtha) as the institutional context for publicly-performed nyāya-inference; the commentarial tradition as the institutional mechanism for accumulating and transmitting interpretive precision across generations — these are the social structures through which vyākaraṇa and nyāya achieve their function as what this paper calls distributed discrimination: the capacity for the tradition's individual members to contribute to, draw on, and check each other's discriminative work within a shared framework of epistemic standards.</p>
+
+  <h3>9.2 The Tradition of Debate and the Public Verifiability of Knowledge</h3>
+  <p>The Nyāya system's explicit attention to the conditions of valid philosophical debate — the sixteen padārthas' inclusion of vāda, jalpa, vitaṇḍā, chala, jāti, and nigrahasthāna as technical categories governing the practice of philosophical exchange — reveals an awareness that the social context of knowledge-production is itself a technical matter requiring systematic specification. A claim that is formally valid as an inference (correct hetu, correct vyāpti, correctly performed five members) but that has been derived through illegitimate debating techniques (chala-sophistry, jāti-futility) is not epistemically trustworthy in the context of public philosophical exchange, because the context's integrity — the mutual commitment of participants to the valid-knowledge-seeking mode of vāda rather than the victory-seeking mode of jalpa — is itself a precondition of the exchange's epistemic value. The Nyāya tradition's explicit theorisation of these contextual preconditions is, from the series' perspective, a recognition that the quality of the attending minds — their adherence to the pramāṇas, their freedom from the kleśas of pride and desire for victory that drive jalpa rather than vāda — is constitutive of the knowledge the exchange can produce. This is the institutional expression of Part Six's claim that the quality of the attending citta determines the quality of what is attended to: applied to the social-institutional context of philosophical exchange, it yields the claim that the quality of the debating participants' cognitive and ethical formation determines the quality of the knowledge their exchange can produce.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-10">X.</h1>
+  <h2 class="sectiontitle">The Yogically-Formed Citta as the Instrument of Śāstric Discrimination</h2>
+
+  <h3>10.1 The Complementarity Thesis</h3>
+  <p>This paper's central argument — developed through the preceding sections' treatments of vyākaraṇa and nyāya — is the complementarity thesis: that the yogically-formed citta (Part Six's subject-matter) and the śāstrically-trained citta (Part Seven's subject-matter) are not competing accounts of what a well-formed discriminative instrument is, with each tradition claiming priority for its own mode of formation, but complementary accounts of two dimensions of the same ideal. The yogically-formed citta is one in which the capacity for sustained, concentrated, non-reactive, absorbed attention has been developed to the degree where the kleśas' distorting effect on cognition has been significantly reduced; the śāstrically-trained citta is one in which the specific technical frameworks (grammatical precision, inferential validity-checking, pramāṇa-application) for operating on linguistically-formulated knowledge-claims with reliability have been installed as stable cognitive saṃskāras. The tradition's implicit ideal — the ideal toward which the gurukula system's combined training in yoga (through the yama-niyama limbs as the educational context's ethical foundation) and śāstra (through the grammatical and logical disciplines as the curriculum's intellectual content) aimed — is their conjunction: a citta both yogically stable enough for its discriminative work to be uncorrupted by kleśa-driven distortion and śāstrically equipped enough for that discrimination to operate within the technical frameworks that make it publicly reliable and institutionally transmissible.</p>
+
+  <h3>10.2 The Series' Developing Argument: Vāk's Proliferation and Return</h3>
+  <p>Part Seven marks the series' turning-point in a specific structural sense. Parts I through VI traced a progressive deepening from the most explicit, vaikharī-level linguistic phenomena (the manifested sounds of Vedic speech in Part I, the phonemic discriminations of Pāṇinian grammar in Part II) toward the most interior, paśyantī-level processes (the yogin's inner attentional discipline of Part VI, approaching the parā-level's ground of undivided awareness). Parts VII through XII trace the return movement: the same progressive deepening now applied to the tradition's concrete social and intellectual history (the śāstric disciplines of Part VII, the applied śāstras of Part VIII, the mantra-technology of Part IX, the historical case studies of Part X, the ethical-metaphysical synthesis of Part XI) — a return movement in which the deep interior developed in Parts I–VI manifests as the productive capacity of a tradition that can proliferate into increasingly diverse and technically sophisticated disciplines precisely because its roots are sunk deep enough. Vyākaraṇa and nyāya are the first two instances of this proliferating return: the yogically-stable, phonemically-precise, affectively-formed, aesthetically-educated citta (Parts I–VI's product) now expressing itself outward as the grammatical precision and logical rigour through which the tradition manages its own knowledge-production at the institutional level.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-11">XI.</h1>
+  <h2 class="sectiontitle">Limits and the Forward Problem</h2>
+
+  <h3>11.1 The Limit of Linguistic and Logical Form: The Body's Return</h3>
+  <p>The discriminative capacities that vyākaraṇa and nyāya develop operate, both of them, in the domain of linguistically-formulated knowledge: knowledge that can be stated, checked, debated, and transmitted in the form of Sanskrit sentences whose grammatical precision can be evaluated against the Aṣṭādhyāyī's rules and whose epistemic credentials can be assessed against the Nyāya-Sūtra's pramāṇa-theory and avayava-structure. But not all knowledge of the kind this series has been examining is or can be linguistically-formulated in this way. The knowledge that a classical Bharatanāṭyam dancer has of how to execute a specific karaṇa — the knowledge that Part Five's Section 3.4's Chidambaram analysis established as residing in the sculptural programme precisely because it cannot be fully specified in verbal form — is an embodied, procedural, skill-level knowledge that the grammatical and logical frameworks of vyākaraṇa and nyāya cannot in principle capture. Part Eight's treatment of Āyurveda will address precisely this knowledge-type — the knowledge of the body's own organisation and the principles governing its health, disease, and restoration — and its introduction of the prāṇic and somatic frameworks that the yoga-śāstra, the abhinaya-śāstra, and the grammatical-logical śāstras all presuppose but do not themselves develop.</p>
+
+  <h3>11.2 The Limit of Institutional Form: The Political and the Economic</h3>
+  <p>Vyākaraṇa and nyāya, as institutional frameworks for distributed discrimination, operate within a social context that neither discipline theorises from within its own technical resources: the context of political organisation, economic structure, and the management of social conflict that makes the gurukula and the debate-hall possible as stable institutional forms. Part Eight's treatment of the Arthaśāstra — the most rigorous Indian account of political economy and statecraft — addresses this context directly, examining the social-institutional substrate within which the śāstric disciplines operate and the account of human motivation and social organisation that makes the tradition's educational and intellectual institutions possible as historical achievements.</p>
+
+  <h3>11.3 The Limit of the Ordinary: The Mantra's Transgressive Claim</h3>
+  <p>The third limit is the most fundamental for the series' overall trajectory: vyākaraṇa and nyāya treat language as an instrument of valid knowledge-production within the domain of ordinary experience and ordinary cognitive operations. Both assume that the knowledge-seeker is operating within the ordinary citta's vṛtti-activities — however well-disciplined by yogic training — and that the goal is the reliable production of valid knowledge-claims expressible in well-formed Sanskrit propositions. But Part Nine's subject-matter — mantra-śāstra — makes a claim that exceeds both of these assumptions: that specific sound-sequences, recited or intoned in specific conditions of citta-concentration and ritual context, produce effects that cannot be accounted for within the ordinary pramāṇa-framework of perception, inference, analogy, and testimony — that the mantra is, in the fullest sense, a technology of Vāk's parā-level, operating not through linguistic reference to extra-linguistic reality but through direct identity with the primal vibration from which both language and reality emerge. This claim is Part Nine's starting-point, and it represents the series' return to Part One's deepest theme — the non-dual ground from which Vāk's differentiation into phoneme, metre, grammar, logic, and all the rest proceeds — through the specifically technical and ritual route of the mantra-tradition's own account of what sound ultimately is and what it can ultimately do.</p>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <h1 class="sectionhead" id="sec-12">XII.</h1>
+  <h2 class="sectiontitle">Forward to Part Eight: Applied Śāstra — Arthaśāstra and Āyurveda</h2>
+
+  <h3>12.1 What This Paper Has Established</h3>
+  <p>This paper has developed ten principal results. First, it established the concept of śāstric proliferation as the structural process through which the tradition's foundational Vāk-insight generates the family of specialised śāstric disciplines. Second, it reconstructed the Aṣṭādhyāyī's architecture — its sūtra-economy, its Śiva-sūtras' pratyāhāra-foundation, its metalanguage of anuvṛtti, adhikāra, and paribhāṣā. Third, it developed the metalanguage's citta-requirements, establishing the structural parallel between grammatical rule-system competence and the concentrated multi-element working-memory management that Part Six's dhāraṇā-account described. Fourth, it developed the sphoṭa-theory as the grammatical tradition's account of what a word is in itself, connecting it to Part One's Vāk-levels at the madhyamā-vaikharī interface. Fifth, it examined Bhartṛhari's Vākyapadīya, particularly the pratibhā-concept as the linguistic-cognitive counterpart of the nirvitarka-samāpatti's transparent object-apprehension. Sixth, it reconstructed the Nyāya-Sūtra's sixteen padārthas as a complete taxonomy of philosophical analysis. Seventh, it developed the five-membered inference's structure and the vyāpti-problem's epistemological depth. Eighth, it examined the four pramāṇas and their relationship to the Yoga-śāstric citta-formation account. Ninth, it addressed vyākaraṇa and nyāya as institutional frameworks for distributed discrimination. Tenth, it developed the complementarity thesis — the yogically-formed and śāstrically-trained citta as complementary dimensions of the tradition's implicit ideal of well-formed discriminative instruments — as the series' central argument for Part Seven.</p>
+
+  <section class="preview-box">
+    <h3>Preview of Part Eight: Proliferation II — Arthaśāstra and Āyurveda</h3>
+    <p>Part Eight will examine the Arthaśāstra of Kauṭilya and the Carakasaṃhitā and Suśrutasaṃhitā of the Āyurvedic tradition as the two applied śāstric disciplines in which the series' developing account of the relationship between the trained citta, the disciplined body, and the structured social environment achieves its most socially-embedded and practically-grounded expression. The Arthaśāstra's account of rājanīti (statecraft) as a śāstra — a technically specified discipline with its own foundational text, its own technical vocabulary, and its own account of valid knowledge and valid method in the political domain — will be examined as the tradition's most developed attempt to apply the kind of discriminative rigour Part Seven has examined in the linguistic and logical domains to the domain of human social and political organisation. The Āyurvedic tradition's account of the body — the doṣa-system (vāta, pitta, kapha), the dhātu-theory of bodily constitution, the concept of prāṇa as the vital principle organising the body's functions — will be examined as the somatic knowledge-framework whose absence from both the Yoga-śāstric and the grammatical-logical accounts Part Seven's Section 11.1 identified as a genuine limit.</p>
+  </section>
+
+  <blockquote class="pull">
+    The grammarian who knows the rule and the situation but cannot hold both simultaneously in a sufficiently concentrated and organised form of attention will mis-apply the rule. The logician who knows the inference-form but whose citta is driven by the desire to win rather than the desire to know will employ jalpa rather than vāda and will produce the appearance of knowledge rather than knowledge itself. Vyākaraṇa and nyāya are, at their deepest level, not merely technical disciplines but specifications of what it is to be the kind of knowing subject — stable, concentrated, motivated by truth rather than by victory, formed by practice toward discriminative reliability — that the śāstric tradition's knowledge-producing activities require. They presuppose the yogically-formed citta because they are the disciplinary contexts within which that citta's discriminative capacity achieves its most technically rigorous expression. And the tradition that trains both, in sequence and together, is not training two separate kinds of expertise but a single, integrated, complementary capacity for knowing well.
+    <span class="attrib">Series B · Editorial Framework</span>
+  </blockquote>
+
+  <div class="divider-orn">❖ ❖ ❖</div>
+
+  <section id="footnotes">
+    <h2 class="sectiontitle" style="font-size:22px;">Footnotes</h2>
+    <ol class="footnotes">
+      <li><sup>1</sup> On the Vedāṅgas and the concept of śāstric proliferation: Jan Gonda, <i>Vedic Literature</i> (Wiesbaden: Harrassowitz, 1975), Chapter 16; and Frits Staal, <i>The Fidelity of Oral Tradition and the Origins of Science</i> (Amsterdam: North Holland, 1986).</li>
+      <li><sup>2</sup> On the Aṣṭādhyāyī's architecture: S.D. Joshi and J.A.F. Roodbergen, <i>The Aṣṭādhyāyī of Pāṇini</i>, vols. I–XVI (Pune: University of Poona, 1986–); and Wijesekera, O.H. de A., <i>Syntax of Cases in the Sanskrit Epics</i> (Leiden: Brill, 1936).</li>
+      <li><sup>3</sup> On the Śiva-sūtras and the pratyāhāra-system: George Cardona, <i>Pāṇini: A Survey of Research</i> (The Hague: Mouton, 1976), Chapter 2; and Paul Kiparsky, "Pāṇini as a Variationist," in <i>Papers from the 5th South Asian Language Analysis Roundtable</i> (Carbondale: South Asian Language Analysis, 1979).</li>
+      <li><sup>4</sup> On the sphoṭa-theory and Bhartṛhari: K.A. Subramania Iyer, <i>Bhartṛhari: A Study of the Vākyapadīya in the Light of the Ancient Commentaries</i> (Poona: Deccan College, 1969); and Harold Coward and K. Kunjunni Raja, eds., <i>The Philosophy of the Grammarians</i> (Princeton: Princeton University Press, 1990).</li>
+      <li><sup>5</sup> On pratibhā: Johannes Bronkhorst, "Études sur Bharṭhari, 3: Bhartṛhari et Mīmāṃsā," <i>Studien zur Indologie und Iranistik</i> 15 (1989): 1–39; and Bimal Krishna Matilal, <i>The Word and the World: India's Contribution to the Study of Language</i> (Oxford: Oxford University Press, 1990), Chapter 6.</li>
+      <li><sup>6</sup> On the Nyāya-Sūtra and the sixteen padārthas: Akṣapāda Gautama, <i>Nyāya-Sūtra</i> with Vātsyāyana's Bhāṣya, trans. Ganganatha Jha, 4 vols. (Poona: Oriental Book Agency, 1939); and Bimal Krishna Matilal, <i>Nyāya-Vaiśeṣika</i> (Wiesbaden: Harrassowitz, 1977).</li>
+      <li><sup>7</sup> On the five-membered inference and vyāpti: Jonardon Ganeri, <i>Semantic Powers: Meaning and the Means of Knowing in Classical Indian Philosophy</i> (Oxford: Clarendon Press, 1999), Chapter 4; and Mark Siderits, <i>Indian Philosophy of Language</i> (Dordrecht: Kluwer, 1991), Chapter 6.</li>
+      <li><sup>8</sup> On the four pramāṇas: Karl Potter, ed., <i>Encyclopedia of Indian Philosophies: Vol. II, Indian Metaphysics and Epistemology</i> (Princeton: Princeton University Press, 1977); and Matilal, <i>Perception: An Essay on Classical Indian Theories of Knowledge</i> (Oxford: Clarendon Press, 1986).</li>
+      <li><sup>9</sup> On the institutional dimension of vyākaraṇa and nyāya: Patrick Olivelle, <i>Language, Texts, and Society: Explorations in Ancient Indian Culture and Religion</i> (Florence: Firenze University Press, 2005); and Sheldon Pollock, <i>The Language of the Gods in the World of Men: Sanskrit, Culture, and Power in Premodern India</i> (Berkeley: University of California Press, 2006), Part I.</li>
+      <li><sup>10</sup> On the complementarity of yogic and śāstric formation: Alexis Sanderson, "Mandala and Āgamic Identity in the Trika of Kashmir," in <i>Mantras et diagrammes rituels dans l'hindouisme</i>, ed. André Padoux (Paris: CNRS, 1986), pp. 169–214 — while not directly addressing the vyākaraṇa-nyāya question, Sanderson's broader treatment of the relationship between initiation (dīkṣā) and knowledge (jñāna) in the Śaiva tradition develops a closely related complementarity argument.</li>
+    </ol>
+  </section>
+
+  <div class="divider-orn">★</div>
+
+  <section id="bibliography">
+    <h2 class="sectiontitle" style="font-size:22px;">Bibliography</h2>
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;">Primary Sources</h4>
+    <p class="dim" style="font-size:14.5px;">
+    Pāṇini. <i>Aṣṭādhyāyī.</i> Ed. and trans. S.C. Vasu. 2 vols. Allahabad: Indian Press, 1891. Repr. Delhi: Motilal Banarsidass, 1980.<br>
+    Patañjali (grammarian). <i>Mahābhāṣya.</i> Ed. F. Kielhorn. 3 vols. Bombay: Government Central Book Depot, 1880–1885.<br>
+    Bhartṛhari. <i>Vākyapadīya.</i> Kāṇḍa I, ed. and trans. K.A. Subramania Iyer. Poona: Deccan College, 1965.<br>
+    Akṣapāda Gautama. <i>Nyāya-Sūtra</i> with Vātsyāyana's Bhāṣya. Trans. Ganganatha Jha. 4 vols. Poona: Oriental Book Agency, 1939.
+    </p>
+    <h4 style="color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin-top:24px;">Secondary Sources</h4>
+    <p class="dim" style="font-size:14.5px;">
+    Cardona, George. <i>Pāṇini: A Survey of Research.</i> The Hague: Mouton, 1976.<br>
+    Iyer, K.A. Subramania. <i>Bhartṛhari: A Study of the Vākyapadīya.</i> Poona: Deccan College, 1969.<br>
+    Matilal, Bimal Krishna. <i>Nyāya-Vaiśeṣika.</i> Wiesbaden: Harrassowitz, 1977.<br>
+    Matilal, Bimal Krishna. <i>Perception.</i> Oxford: Clarendon Press, 1986.<br>
+    Matilal, Bimal Krishna. <i>The Word and the World.</i> Oxford: Oxford University Press, 1990.<br>
+    Ganeri, Jonardon. <i>Semantic Powers.</i> Oxford: Clarendon Press, 1999.<br>
+    Pollock, Sheldon. <i>The Language of the Gods in the World of Men.</i> Berkeley: University of California Press, 2006.<br>
+    Coward, Harold, and K. Kunjunni Raja, eds. <i>The Philosophy of the Grammarians.</i> Princeton: Princeton University Press, 1990.
+    </p>
+  </section>
+
+  <div class="divider-orn">☆</div>
+
+  <section id="glossary">
+    <h2 class="sectiontitle" style="font-size:22px;">Glossary</h2>
+    <dl class="glossary">
+      <dt><span class="glossterm">स्फोट</span> sphoṭa</dt>
+      <dd>The unitary, indivisible, meaning-bearing word-unit revealed (sphūṭyate) by the physical sound-sequence (dhvani) without being identical to it. Bhartṛhari's Vākyapadīya's central technical concept: the entity that is stable and identical across multiple physical utterances of the same word, and whose relationship to artha (meaning) constitutes the linguistic sign's proper account.</dd>
+      <dt><span class="glossterm">प्रतिभा</span> pratibhā</dt>
+      <dd>The flash of holistic understanding; the instantaneous, non-sequential apprehension of a sentence's complete meaning that occurs in a competent hearer at the moment of genuine understanding. Bhartṛhari's most philosophically distinctive concept: the cognitive event structurally parallel to nirvitarka-samāpatti's transparent object-apprehension, available in the linguistic domain.</dd>
+      <dt><span class="glossterm">अनुवृत्ति</span> anuvṛtti</dt>
+      <dd>Carryover: the Aṣṭādhyāyī's device whereby a rule's constituent elements remain operative in subsequent rules in the same section until explicitly cancelled. The primary mechanism of the grammar's sūtra-economy; one of the primary demands on the grammarian's citta, which must hold the relevant carried-over elements in active working memory.</dd>
+      <dt><span class="glossterm">व्याप्ति</span> vyāpti</dt>
+      <dd>Universal concomitance: the invariant co-occurrence of hetu and sādhya across all observed and inferred instances, which the nyāya inference requires as its foundational epistemic claim. The philosophically most demanding element of the five-membered inference; the locus of the tradition's deepest debate about the epistemic basis of general claims.</dd>
+      <dt><span class="glossterm">प्रमाण</span> pramāṇa</dt>
+      <dd>Valid source of knowledge; four in the Nyāya system: pratyakṣa (perception), anumāna (inference), upamāna (comparison/analogy), śabda (testimony). The instruments through which valid knowledge is legitimately obtained, whose application conditions and reliability-requirements the Nyāya-Sūtra specifies with technical precision.</dd>
+      <dt><span class="glossterm">वाद</span> vāda</dt>
+      <dd>Sincere philosophical debate: the form of argumentative exchange in which both parties are genuinely motivated by the desire to reach correct conclusions and accept the pramāṇas and avayavas as binding constraints. Distinguished from jalpa (victory-seeking debate) and vitaṇḍā (destructive debate) as the only form of exchange that can, in principle, produce valid knowledge as its outcome.</dd>
+      <dt><span class="glossterm">हेत्वाभास</span> hetvābhāsa</dt>
+      <dd>Fallacious reason; the five varieties of defective hetu (erratic, contradictory, equal-and-opposite, unproven, mistimed) that produce the appearance of valid inference without its reality. The Nyāya taxonomy of formal fallacies; the discipline's most direct contribution to the tradition of systematic logic.</dd>
+      <dt><span class="glossterm">परिभाषा</span> paribhāṣā</dt>
+      <dd>Interpretive maxim; meta-rules in the Aṣṭādhyāyī that govern the application of object-level rules in cases of conflict or ambiguity. Metalinguistic rules about rules: the Aṣṭādhyāyī's formal self-description, specifying how the rule-system is to be interpreted and applied as a formal system rather than as a list of cases.</dd>
+    </dl>
+  </section>
+
+  <div class="divider-orn">↗</div>
+
+  <section class="preview-box">
+    <h3>Series B: Complete Part Map (Reference)</h3>
+    <table class="partmap">
+      <tr><th>Part</th><th>Title</th><th>Psychological Stage</th></tr>
+      <tr><td>I</td><td>Vāk as the Ground of Psychological Awareness</td><td>Pre-differentiated awareness</td></tr>
+      <tr><td>II</td><td>Śabda-Bheda: The Birth of Discrimination</td><td>Differentiation / discernment</td></tr>
+      <tr><td>III</td><td>Sāma Veda and the Birth of Affect</td><td>Feeling-toned cognition</td></tr>
+      <tr><td>IV</td><td>Nāṭyaśāstra I: Rasa and the Architecture of Emotion</td><td>Aesthetic embodiment</td></tr>
+      <tr><td>V</td><td>Nāṭyaśāstra II: Abhinaya and Embodied Expression</td><td>Somatic cognition</td></tr>
+      <tr><td>VI</td><td>Yoga-Śāstra: Citta-Vṛtti and Disciplined Attention</td><td>Self-regulation / will</td></tr>
+      <tr><td class="this-paper">VII</td><td class="this-paper">Proliferation I: Vyākaraṇa and Nyāya</td><td class="this-paper">This Paper · Specialised cognition</td></tr>
+      <tr><td>VIII</td><td>Proliferation II: Arthaśāstra, Āyurveda</td><td>Social/embodied extension</td></tr>
+      <tr><td>IX</td><td>Mantra-Śāstra: Vāk Returning as Sound-Technology</td><td>Recursive self-application</td></tr>
+      <tr><td>X</td><td>Case Studies in Śabda-to-Śāstra Transmission</td><td>Applied/historical synthesis</td></tr>
+      <tr><td>XI</td><td>Dharma and Adharma: The Convergent Psychology of Order</td><td>Ethical-metaphysical synthesis</td></tr>
+      <tr><td>XII</td><td>Pratiprasava: Vāk's Return and the Handoff Beyond</td><td>Closing return</td></tr>
+    </table>
+  </section>
+
+</main>
+
+<footer class="papertail">
+  <div class="om">ॐ तत् सत्</div>
+  <div class="omtatsat">om tat sat — That is Truth</div>
+  <div class="stamp">
+    <b>Series B · Part Seven</b> · Proliferation I: Vyākaraṇa and Nyāya<br>
+    Cultural Musings · Vedic &amp; Śāstric Research Platform<br>
+    Predecessor: Series B · Part Six · Yoga-Śāstra: Citta-Vṛtti<br>
+    Successor: Series B · Part Eight · Proliferation II: Arthaśāstra, Āyurveda
+  </div>
+</footer>
+
+</body>
+</html>
